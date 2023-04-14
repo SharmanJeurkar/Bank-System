@@ -13,6 +13,8 @@ public class Main {
 		
 		if( loginSuccesfull== true) {
 			home.printFeatures();
+		}else {
+			obj1.login();
 		}
 		
 	}
