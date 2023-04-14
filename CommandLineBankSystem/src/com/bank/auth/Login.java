@@ -16,7 +16,12 @@ public class Login {
 		System.out.println("Password: ");
 		String ipass = obj.next();
 		
-		if(iuname.equals(uname) && upass.equals(upass)) {
+		/*
+		 * System.out.println(iuname.equals(uname));
+		 * System.out.println(upass.equals(upass));
+		 */
+		
+		if(iuname.equals(uname)==true && upass.equals(ipass)==true) {
 			System.out.println("Login Succesfull......");
 			return true;
 		}else {
