@@ -17,7 +17,11 @@ public class Main {
 			for(int i=0; i<=5; i++) {
 				if(i<5) {
 					System.out.println("Retry logging in..... Attempt "+i);
-					obj1.login();
+					loginSuccesfull=obj1.login();
+					if(loginSuccesfull==true) {
+						home.printFeatures();
+						break;
+					}
 				}else {
 					System.err.println("Login credentials aren't correct!");
 					System.exit(1);
