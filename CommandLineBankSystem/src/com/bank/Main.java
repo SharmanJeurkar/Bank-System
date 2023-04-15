@@ -11,22 +11,29 @@ public class Main {
 		
 		boolean loginSuccesfull = obj1.login();
 		
+		
 		if( loginSuccesfull== true) {
 			home.printFeatures();
+			home.selectFeature();
 		}else {
 			for(int i=0; i<=5; i++) {
-				if(i<5) {
-					System.out.println("Retry logging in..... Attempt "+i);
-					loginSuccesfull=obj1.login();
-					if(loginSuccesfull==true) {
-						home.printFeatures();
-						break;
+				System.out.println(i);
+				
+				 if(i<5) { 
+					 System.out.println("Retry logging in..... Attempt "+i);
+					 loginSuccesfull=obj1.login(); 
+					 
+					 if(loginSuccesfull==true) {
+						 home.printFeatures(); 
+						 home.selectFeature();
+						 break;
+						 } 
+					 }
+				 else {
+						 System.err.println("Login credentials aren't correct!"); System.exit(1);
+						 return; 
 					}
-				}else {
-					System.err.println("Login credentials aren't correct!");
-					System.exit(1);
-					return;
-				}
+				 
 			}
 			
 		}
