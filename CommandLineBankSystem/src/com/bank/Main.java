@@ -16,10 +16,10 @@ public class Main {
 			home.printFeatures();
 			home.selectFeature();
 		}else {
-			for(int i=0; i<=5; i++) {
-				System.out.println(i);
+			for(int i=2; i<=6; i++) {
 				
-				 if(i<5) { 
+				
+				 if(i<=5) { 
 					 System.out.println("Retry logging in..... Attempt "+i);
 					 loginSuccesfull=obj1.login(); 
 					 
@@ -30,7 +30,8 @@ public class Main {
 						 } 
 					 }
 				 else {
-						 System.err.println("Login credentials aren't correct!"); System.exit(1);
+						 System.err.println("Login credentials aren't correct!"); 
+						 System.exit(1);
 						 return; 
 					}
 				 
