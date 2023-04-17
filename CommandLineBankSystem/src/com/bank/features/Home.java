@@ -23,14 +23,21 @@ public void selectFeature() {
 		
 		
 		
+		
 		if(selectedOption.equalsIgnoreCase(creditoption)) {
 			Credit credit = new Credit();
 			System.out.println("Input the amount to be credited: ");
 			int amountToCredit =  scanner.nextInt();
 			int sum = credit.creditMoney(amountToCredit);
+			
+			System.out.println("Total Money after crediting: " + sum);
 		}
 		else if(selectedOption.equalsIgnoreCase(debitOption)) {
-			System.out.println("Hello debit");
+			Debit debit = new Debit();
+			System.out.println("Enter the amount to debit: ");
+			int moneyToDebit = scanner.nextInt();
+			int sum=debit.moneyDeposit(moneyToDebit);
+			System.out.println(sum);
 		}
 	}
 	
