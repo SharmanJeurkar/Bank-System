@@ -18,6 +18,7 @@ public class Credit_Dao {
 	Statement st;
 	ResultSet rs;
 	
+	//Fetching  the amount in user's account with the help of user's account number(unique key)
 	public long fetchAmountInAccount(Long accountNumber) throws Exception {
 		
 		String query = "select * from user_account where Account_Number = " + accountNumber;
