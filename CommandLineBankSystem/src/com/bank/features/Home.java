@@ -16,7 +16,7 @@ public class Home {
 		
 	}
 	
-public void selectFeature() {
+public void selectFeature() throws Exception {
 		
 		System.out.println("Select one of the above options");
 		String selectedOption = scanner.nextLine();
@@ -27,17 +27,17 @@ public void selectFeature() {
 		if(selectedOption.equalsIgnoreCase(creditoption)) {
 			Credit credit = new Credit();
 			System.out.println("Input the amount to be credited: ");
-			int amountToCredit =  scanner.nextInt();
-			int sum = credit.creditMoney(amountToCredit);
+			long amountToCredit =  scanner.nextLong();
+			System.out.println("Account Number: ");
+			long accountNumber = scanner.nextLong();
+			long sum = credit.creditMoney(amountToCredit, accountNumber);
+			
+			System.out.println("Sum: " + sum);
 			
 			System.out.println("Total Money after crediting: " + sum);
 		}
 		else if(selectedOption.equalsIgnoreCase(debitOption)) {
-			Debit debit = new Debit();
-			System.out.println("Enter the amount to debit: ");
-			int moneyToDebit = scanner.nextInt();
-			int sum=debit.moneyDeposit(moneyToDebit);
-			System.out.println(sum);
+			
 		}
 	}
 	
