@@ -5,7 +5,7 @@ import com.bank.features.Home;
 
 public class Main {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		Login obj1 = new Login();
 		Home home = new Home();
 		
