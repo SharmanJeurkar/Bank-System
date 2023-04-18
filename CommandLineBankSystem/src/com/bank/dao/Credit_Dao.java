@@ -19,7 +19,7 @@ public class Credit_Dao {
 	ResultSet rs;
 	
 	//Fetching  the amount in user's account with the help of user's account number(unique key)
-	public long fetchAmountInAccount(Long accountNumber) throws Exception {
+	public long fetchAmountInAccount(long accountNumber) throws Exception {
 		
 		String query = "select * from user_account where Account_Number = " + accountNumber;
 		connection = connector.Connect();
@@ -27,8 +27,8 @@ public class Credit_Dao {
 		st = connection.createStatement();
 		rs=st.executeQuery(query);
 		
+		rs.next();
 		Long ammountInAccount = rs.getLong(3);
-		
 		
 		return ammountInAccount;
 	}
