@@ -32,11 +32,17 @@ public void selectFeature() throws Exception {
 			long accountNumber = scanner.nextLong();
 			long sum = credit.creditMoney(amountToCredit, accountNumber);
 			
-			System.out.println("Sum: " + sum);
 			
 			System.out.println("Total Money after crediting: " + sum);
 		}
 		else if(selectedOption.equalsIgnoreCase(debitOption)) {
+			Debit db = new Debit();
+			System.out.println("Input the amount to be debited: ");
+			long amountToDebit =  scanner.nextLong();
+			System.out.println("Account Number: ");
+			long accountNumber = scanner.nextLong();
+			long sum = db.moneyDeposit(amountToDebit, accountNumber);
+			System.out.println("Total Money after debiting: " + sum);
 			
 		}
 	}
