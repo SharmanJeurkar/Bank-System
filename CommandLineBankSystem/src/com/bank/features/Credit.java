@@ -12,7 +12,7 @@ public class Credit {
 		
 		long sum = amountInAccount + amountToCredit;
 		
-		
+		cd.insertValuesInDb(accountNumber,sum);
 		return sum;
 	}
 	

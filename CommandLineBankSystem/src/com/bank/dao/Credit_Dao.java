@@ -32,5 +32,13 @@ public class Credit_Dao {
 		
 		return ammountInAccount;
 	}
+	
+	public  void insertValuesInDb(long accountNumber,long sum) throws Exception {
+		String query =  "update user_account set  Amount_IN_Account="+sum+" where Account_Number= "+accountNumber+";";
+		st=connection.createStatement();
+		st.executeUpdate(query);
+		
+		System.out.println("Account updated....");
+	}
 
 }
