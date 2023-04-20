@@ -1,14 +1,17 @@
 package com.bank.features;
 
-public class Credit {
-	int moneyInTheAccount=100000;
+import com.bank.dao.Credit_Dao;
+
 //addition of money in the account
+public class Credit {
 	
-	public int creditMoney(int amontToCredit){
+	public long creditMoney(long amountToCredit,long accountNumber) throws Exception{
 		
+		Credit_Dao cd  = new Credit_Dao();
+		long amountInAccount = cd.fetchAmountInAccount(accountNumber);
 		
-		int sum  = moneyInTheAccount + amontToCredit;
-		moneyInTheAccount = sum;
+		long sum = amountInAccount + amountToCredit;
+		
 		
 		return sum;
 	}
