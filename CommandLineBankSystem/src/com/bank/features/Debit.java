@@ -9,7 +9,7 @@ public class Debit {
 	public long moneyDeposit(long moneyToDebit, long accountNumber) throws Exception {
 		
 		SqlDao sd = new SqlDao();
-		long moneyInAccount = sd.fetchAmountInAccount(accountNumber);	
+		final long moneyInAccount = sd.fetchAmountInAccount(accountNumber);	
 		long sum = moneyInAccount - moneyToDebit;
 		
 		sd.insertValuesInDb(accountNumber, sum);

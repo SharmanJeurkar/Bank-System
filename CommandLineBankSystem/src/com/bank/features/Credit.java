@@ -9,7 +9,7 @@ public class Credit {
 	public long creditMoney(long amountToCredit,long accountNumber) throws Exception{
 		
 		SqlDao sd = new SqlDao();
-		long amountInAccount = sd.fetchAmountInAccount(accountNumber);
+		final long amountInAccount = sd.fetchAmountInAccount(accountNumber);
 		
 		long sum = amountInAccount + amountToCredit;
 		
