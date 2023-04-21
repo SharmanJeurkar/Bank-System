@@ -12,7 +12,7 @@ public class Main {
 		boolean loginSuccesfull = obj1.login();
 		
 		
-		if( loginSuccesfull== true) {
+		if( loginSuccesfull) {
 			home.printFeatures();
 			home.selectFeature();
 		}else {
@@ -23,7 +23,7 @@ public class Main {
 					 System.out.println("Retry logging in..... Attempt "+i);
 					 loginSuccesfull=obj1.login(); 
 					 
-					 if(loginSuccesfull==true) {
+					 if(loginSuccesfull) {
 						 home.printFeatures(); 
 						 home.selectFeature();
 						 break;
