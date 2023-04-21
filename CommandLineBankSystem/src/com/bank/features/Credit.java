@@ -1,18 +1,19 @@
 package com.bank.features;
 
-import com.bank.dao.Credit_Dao;
+
+import com.bank.dao.SqlDao;
 
 //addition of money in the account
 public class Credit {
 	
 	public long creditMoney(long amountToCredit,long accountNumber) throws Exception{
 		
-		Credit_Dao cd  = new Credit_Dao();
-		long amountInAccount = cd.fetchAmountInAccount(accountNumber);
+		SqlDao sd = new SqlDao();
+		long amountInAccount = sd.fetchAmountInAccount(accountNumber);
 		
 		long sum = amountInAccount + amountToCredit;
 		
-		cd.insertValuesInDb(accountNumber,sum);
+		sd.insertValuesInDb(accountNumber,sum);
 		return sum;
 	}
 	
