@@ -21,7 +21,7 @@ public class Login {
 		 * System.out.println(upass.equals(upass));
 		 */
 		
-		if(iuname.equals(uname)==true && upass.equals(ipass)==true) {
+		if(iuname.equals(uname)&& upass.equals(ipass)) {
 			System.out.println("Login Succesfull......");
 			return true;
 		}else {
