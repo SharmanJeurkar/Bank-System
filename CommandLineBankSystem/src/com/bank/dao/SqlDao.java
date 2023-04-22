@@ -33,7 +33,7 @@ public class SqlDao {
 		System.out.println("Account updated....");
 	}
 	
-	public boolean Login() {
+	public boolean login() {
 		
 		return false;
 		
